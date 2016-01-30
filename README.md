@@ -1,6 +1,6 @@
-# Portfolio Website
+# InStore Landing
 
-> A portfolio website about my past projects
+> The landing page site for InStore
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@
 
 ## Usage
 
-Just go to the [http://www.derrickjchie.com](http://www.derrickjchie.com) link in your preferred browser!
+Just go to the [http://www.findinstore.co](http://www.findinstore.co) link in your preferred browser!
 
 ## Requirements
 
@@ -26,4 +26,4 @@ Just fork a copy over to your GitHub account to play around with it. When you're
 
 ### Roadmap
 
-View the project roadmap [here](https://github.com/djchie/portfolio-website/issues)
+View the project roadmap [here](https://github.com/findinstore/instore-landing/issues)
