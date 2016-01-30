@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-website",
+  "version": "0.0.0",
+  "description": "A portfolio website about my past projects",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "push": "git push origin master",
+    "deploy": "git push heroku master"
+  },
+  "repository": "https://github.com/djchie/portfolio-website",
+  "author": "Derrick Chie (http://www.derrickjchie.com)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
