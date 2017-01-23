@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "instore-landing",
   "scripts": {
-    "start": "node app.js",
-    "lint": "eslint src",
-    "postinstall": "webpack -p --config webpack.prod.config.js --progress"
+    "build": "NODE_ENV=production node_modules/webpack/bin/webpack.js --config ./webpack.prod.config.js --progress --colors",
+    "start": "node ./src/app.js"
   },
   "repository": {
     "type": "git",
