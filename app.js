@@ -1,11 +1,27 @@
+var path = require('path');
+var webpack = require('webpack');
 var express = require('express');
-var port = process.env.PORT || 5000;
-var app = express();
- 
-app.use(express.static('public'));
+var config = require('./webpack.config');
+var port = process.env.PORT || 3000;
 
-app.get('/', function(request, response) {
-    response.sendfile(__dirname + '/public/index.html');
-}).listen(port, function () {
+var app = express();
+var compiler = webpack(config);
+
+if (process.env.NODE_ENV !== 'production') {
+  app.use(require('webpack-dev-middleware')(compiler, {
+    publicPath: config.output.publicPath
+  }));
+
+  app.use(require('webpack-hot-middleware')(compiler));
+}
+
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.listen(port, function(err) {
+  if (err) {
+    return console.error(err);
+  }
   console.log('Server listening on: ' + port);
 });
