@@ -1,7 +1,11 @@
 var path = require('path');
 var webpack = require('webpack');
 var express = require('express');
-var config = require('./webpack.config');
+if (process.env.NODE_ENV === 'production') {
+  var config = require('./webpack.production.config');
+} else {
+  var config = require('./webpack.config');
+}
 var port = process.env.PORT || 3000;
 
 var app = express();
