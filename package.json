@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "instore-landing",
   "scripts": {
-    "build": "NODE_ENV=production node_modules/webpack/bin/webpack.js --config ./webpack.prod.config.js --progress --colors",
+    "dev": "echo hi",
+    "prod": "NODE_ENV=production node_modules/webpack/bin/webpack.js --config ./webpack.prod.config.js --progress --colors",
     "start": "node ./src/app.js"
   },
   "repository": {
