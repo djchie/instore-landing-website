@@ -12,16 +12,7 @@ module.exports = {
     publicPath: '/static/'
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': '"production"'
-      }
-    }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        'HOST_ENV': '"web"'
-      }
-    })
+    new webpack.HotModuleReplacementPlugin(),
   ],
   module: {
     loaders: [{
