@@ -4,7 +4,8 @@
   "description": "instore-landing",
   "scripts": {
     "start": "node app.js",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "postinstall": "webpack -p --config ./webpack.production.config.js --progress"
   },
   "repository": {
     "type": "git",
