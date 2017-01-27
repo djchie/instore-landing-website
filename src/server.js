@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const axios = require('axios');
 const rp = require('request-promise');
 
-const config = require('./config.js');
+const config = require('../config.js');
 
 module.exports = {
   app: function () {

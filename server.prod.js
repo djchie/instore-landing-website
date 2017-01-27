@@ -2,7 +2,7 @@ var express = require('express');
 var rp = require('request-promise');
 
 var app = express();
-var config = require('./src/config.js');
+var config = require('./config.js');
 
 app.set('port', (process.env.PORT || 5000));
 
