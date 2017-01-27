@@ -3,7 +3,6 @@ var rp = require('request-promise');
 var bodyParser = require('body-parser');
 
 var app = express();
-var config = require('./config.js');
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -24,14 +23,14 @@ app.post('/signup', (req, res) => {
 
   rp({
     method: 'POST',
-    url: `https://us15.api.mailchimp.com/3.0/lists/${process.env.MAILCHIMP_LIST || config.MAILCHIMP_LIST}/members`,
+    url: `https://us15.api.mailchimp.com/3.0/lists/${process.env.MAILCHIMP_LIST}/members`,
     auth: {
       user: 'any',
-      password: process.env.MAILCHIMP_API || config.MAILCHIMP_API,
+      password: process.env.MAILCHIMP_API,
     },
     header: {
       'Content-Type': 'application/json',
-      'Authorization': `apikey ${process.env.MAILCHIMP_API || config.MAILCHIMP_API}`,
+      'Authorization': `apikey ${process.env.MAILCHIMP_API}`,
     },
     json: obj,
   })
