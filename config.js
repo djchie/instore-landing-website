@@ -1,4 +1,1 @@
-module.exports = {
-  MAILCHIMP_API: '026a07d6c5813f43c5941927945f96a2-us15',
-  MAILCHIMP_LIST: '2ecdab2918',
-};
+

@@ -26,9 +26,6 @@ module.exports = {
         status: 'subscribed',
       };
 
-      console.log(JSON.stringify(obj), 'obj');
-      console.log(config.MAILCHIMP_API, 'mailchipm API');
-
       rp({
         method: 'POST',
         url: `https://us15.api.mailchimp.com/3.0/lists/${config.MAILCHIMP_LIST}/members`,

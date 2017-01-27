@@ -1,5 +1,6 @@
 var express = require('express');
 var rp = require('request-promise');
+var bodyParser = require('body-parser');
 
 var app = express();
 var config = require('./config.js');
@@ -7,6 +8,8 @@ var config = require('./config.js');
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // views is directory for all template files
 app.get('/', function(request, response) {
