@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "instore-landing",
   "scripts": {
-    "dev": "echo hi",
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --config ./webpack.dev.config.js --progress --colors && node ./src/app.js",
     "prod": "NODE_ENV=production node_modules/webpack/bin/webpack.js --config ./webpack.prod.config.js --progress --colors",
     "start": "node ./src/app.js"
   },
@@ -47,9 +47,14 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "dependencies": {
+    "axios": "^0.15.3",
+    "body-parser": "^1.16.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "postcss-loader": "^1.2.2",
+    "querystring": "^0.2.0",
     "react": "^0.14.6",
-    "react-dom": "^0.14.6"
+    "react-dom": "^0.14.6",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
   }
 }

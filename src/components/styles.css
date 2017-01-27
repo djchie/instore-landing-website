@@ -113,3 +113,8 @@ body {
 .get-notified button:focus {
   outline: 0;
 }
+
+.get-notified button:disabled {
+  color: black;
+  background-color: black;
+}
